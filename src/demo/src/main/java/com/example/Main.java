@@ -1,3 +1,7 @@
+// שי עושה את זה ביונירסט על ידי מפה לפרמטרים ורק אובייקט ריספונס של
+// יונירסט שמקבל את הלינק ואת הפרמטרים ושולח כגייסון.
+// ניתן לראות בשיעור 7 של סדנא בגיטהאב.
+
 // GET = turning the JSON string we get into an object
 // POST = turning the object into a JSON String we can post 
 
