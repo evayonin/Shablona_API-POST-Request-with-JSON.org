@@ -1,3 +1,9 @@
+// GET = turning the JSON string we get into an object
+// POST = turning the object into a JSON String we can post 
+
+//בבקשות פוסט שולחים מידע אל השרת ולכן יש להמיר את האובייקט המקומי למחרוזת גייסון שתואמת למבנה שהשרת מצפה לו ולשלוח אותה כגוף הבקשה.
+// לעומת זאת, בבקשת גט מקבלים מהשרת מידע בפורמט גייסון, ויש להמיר את המחרוזת שהתקבלה חזרה לאובייקט תואם בקוד כדי שנוכל לעבוד איתו בצורה נוחה. 
+//כלומר, בפוסט עושים המרה מאובייקט לגייסון, ובגט עושים המרה מגייסון לאובייקט.
 package com.example;
 
 import java.io.IOException;
@@ -65,8 +71,7 @@ public class Main {
                 .header("Content-Type", "application/json") // להשאיר ככה. נותנים שם לחלק הגלוי בקישור ואת הסוג פורמט
                                                             // (גייסון) שמוצג באינטרנט
                 .POST(HttpRequest.BodyPublishers.ofString(json.toString())) // להשאיר ככה רק לשנות את השם של הגייסון
-                                                                            // ששולחים.
-                                                                            // תמיד נשלח כסטרינג.
+                                                                            // ששולחים. תמיד נשלח כסטרינג.
                 .build();
 
         HttpResponse<String> response = client.send(
